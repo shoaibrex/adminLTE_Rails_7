@@ -1,0 +1,26 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4" id="mySidebar" style="z-index: 1;">
+
+  <a href="#" class="brand-link pl-4">
+    <span class="logo-lg"><b>We</b> Call Leads</span>
+  </a>
+
+  <div class="sidebar">
+    <%#= render 'shared/admin/search' %>
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-header">MAIN NAVIGATION</li>
+
+        <li class="nav-item <%#= 'active' if current_tab == 'Home' %>">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fa fa-dashboard"></i><p>Dashboard</p>
+          </a>
+        </li>
+
+          <li class="nav-item "><a href="#" class="nav-link"><i class="nav-icon fa fa-list-alt"></i> <p>My Sales Tasks</p></a></li>
+          <li class="nav-item "><a href="#" class="nav-link"><i class="nav-icon fa fa-list-alt"></i> <p>Report</p></a></li>
+          <li class="nav-item "><a href="#" class="nav-link"><i class="nav-icon fa fa-list-alt"></i> <p>Others</p></a></li>
+
+      </ul>
+    </nav>
+  </div>
+</aside>

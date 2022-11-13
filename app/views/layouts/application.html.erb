@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CallLeads</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body data-scrollbar-auto-hide="n" class="hold-transition <%= Rails.env.production? ? 'skin-blue' : 'skin-red' %> sidebar-mini" data-current-user-id="<%#= current_user.try(:id) %>">
+  <div class="wrapper">
+    <%= render 'admin/header' %>
+    <%= render 'admin/main_navigation' %>
+
+    <div class="content-wrapper">
+      <%#= render "shared/flash_messages" %>
+      <%= yield %>
+    </div>
+
+    <%= render 'admin/footer' %>
+    <div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+    <%#= render 'shared/admin/side_bar' %>
+  </div>
+</body>
+</html>
